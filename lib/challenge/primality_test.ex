@@ -6,11 +6,11 @@ defmodule ArchiveChallenges.Challenge.PrimalityTest do
   First, we perform some simple checks before doing any heavy math
   to exclude some obvious non-primes
 
-  Next, we use Selfridge's Conjecture[1] along with the Fermat test[2]
-  to exclude (probably not all) non-primes
+  Next, we perform LUT-accelerated trial division to
+  determine if the number is easily proven non-prime
 
-  Finally, we perform trial division to determine if the
-  number actually is prime
+  Finally, we use Selfridge's Conjecture[1] along with the Fermat test[2]
+  to exclude non-primes with a very high accuracy
 
   [1](https://en.wikipedia.org/wiki/John_Selfridge#Selfridge's_conjecture_about_primality_testing)
   [2](Fermat test: https://en.wikipedia.org/wiki/Fermat_primality_test)
